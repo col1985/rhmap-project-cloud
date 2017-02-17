@@ -32,7 +32,7 @@ function pingRoute() {
                     err: err.toString()
                 })
             } else {
-                log.info('service Call error: %s', err.toString());
+                // log.info('service Call error: %s', err.toString());
                 res.status(res.statusCode).json({
                     status: res.statusCode,
                     body: body
