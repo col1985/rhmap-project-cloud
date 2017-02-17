@@ -19,7 +19,7 @@ function pingRoute() {
         fh.service({
             "guid": serviceID,
             "path": path,
-            "method": "POST",
+            "method": "GET",
             "params": {
                 "hello": "world",
                 "count": count++
