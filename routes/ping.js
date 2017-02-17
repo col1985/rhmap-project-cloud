@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var log = require('./../lib/logger')('pingRoute');
 var fh = require('fh-mbaas-api');
-var serviceID = require('./package.json').serviceID;
+var serviceID = require('./../package.json').serviceID;
 var count = 0;
 
 function pingRoute() {
