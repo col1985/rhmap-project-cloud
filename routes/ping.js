@@ -27,7 +27,7 @@ function pingRoute() {
         }, function(err, body, res) {
             log.info('service Call statuscode: %s', res && res.statusCode);
             if (err) {
-                log.error('service Call error: %s', err.toString());
+                log.error('service Call error: ', err);
                 res.status(res.statusCode).json({
                     err: err.toString()
                 })
