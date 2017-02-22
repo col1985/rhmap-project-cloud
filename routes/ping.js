@@ -13,7 +13,7 @@ function pingRoute() {
 
     // GET REST endpoint - query params may or may not be populated
     ping.get('/', function(req, res) {
-        log.info('In ping route GET / req.query=%s', req.query);
+        log.info('In ping route GET / req.query=', req.query);
         var path = req.query && req.query.path ? req.query.path : '/ping';
 
         fh.service({
