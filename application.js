@@ -8,7 +8,8 @@ var reqTimer = require('fh-request-timer');
 
 // list the endpoints which you want to make securable here
 var securableEndpoints = [
-    '/push'
+    '/push',
+    '/ping'
 ];
 
 var app = express();
