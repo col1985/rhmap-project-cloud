@@ -24,17 +24,17 @@ function pingRoute() {
                 "hello": "world",
                 "count": count++
             },
-        }, function(err, body, res) {
-            log.info('service Call statuscode: %s', res && res.statusCode);
+        }, function(err, body, resp) {
+            log.info('service Call statuscode: %s', resp && resp.statusCode);
             if (err) {
                 log.error('service Call error: ', err);
-                res.status(res.statusCode).json({
+                res.status(resp.statusCode).json({
                     err: err.toString()
                 })
             } else {
                 // log.info('service Call error: %s', err.toString());
-                res.status(res.statusCode).json({
-                    status: res.statusCode,
+                res.status(resp.statusCode).json({
+                    status: resp.statusCode,
                     body: body
                 });
             }
