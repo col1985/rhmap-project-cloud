@@ -26,14 +26,12 @@ function pingRoute() {
                 "count": count++
             },
         }, function(err, body, resp) {
-            // log.info('service Call statuscode: %s', resp && resp.statusCode);
             if (err) {
                 log.error('service Call error: ', err);
-                res.status(resp.statusCode).json({
+                res.status(500).json({
                     err: err.toString()
                 })
             } else {
-                // log.info('service Call error: %s', err.toString());
                 res.status(resp.statusCode).json({
                     status: resp.statusCode,
                     body: body
