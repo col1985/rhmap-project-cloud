@@ -33,7 +33,7 @@ fs.readdirSync(routesDir).forEach(function(file) {
     var route = file.slice(0, -3);
     console.log(route, routesDir + '/' + file)
         // create route
-    app.use(route, require(routesDir + '/' + file)());
+    app.use('/' + route, require(routesDir + '/' + file)());
 });
 
 // Important that this is last!
