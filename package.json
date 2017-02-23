@@ -30,13 +30,13 @@
         "time-grunt": "^0.3.2"
     },
     "license": "Apache-2.0",
-    "cloudID": "qcoa7sghvg5wbewtaagi2sjh",
+    "appID": "qcoa7sghvg5wbewtaagi2sjh",
     "serviceID": "rkkyacp5h6oplrnm7zuqai5b",
     "main": "application.js",
     "scripts": {
         "test": "grunt unit",
         "debug": "grunt serve",
         "start": "node application.js",
-        "logs": "./bin/fhlogs.sh rkkyacp5h6oplrnm7zuqai5b dev"
+        "logs": "./bin/fhlogs.sh qcoa7sghvg5wbewtaagi2sjh dev"
     }
 }
