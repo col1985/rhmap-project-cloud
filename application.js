@@ -30,10 +30,10 @@ app.use(mbaasExpress.fhmiddleware());
 // load routes dynamically
 fs.readdirSync(routesDir).forEach(function(file) {
     // remove extension
-    var route = file.slice(0, -3);
-    console.log(route, routesDir + '/' + file)
-        // create route
-    app.use('/' + route, require(routesDir + '/' + file)());
+    var route = '/' + file.slice(0, -3);
+
+    // create route
+    app.use(route, require(routesDir + '/' + file)());
 });
 
 // Important that this is last!
