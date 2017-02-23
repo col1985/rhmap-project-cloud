@@ -7,7 +7,7 @@ var log = require('./lib/logger')(pkg.name);
 var reqTimer = require('fh-request-timer');
 var fs = require('fs');
 
-var routesDir = __dirname + '/routes';
+var routesDir = './routes';
 var securableEndpoints = [];
 var app = express();
 
@@ -31,8 +31,8 @@ app.use(mbaasExpress.fhmiddleware());
 fs.readdirSync(routesDir).forEach(function(file) {
     // remove extension
     var route = file.slice(0, -3);
-
-    // create route
+    console.log(route, routesDir + '/' + file)
+        // create route
     app.use(route, require(routesDir + '/' + file)());
 });
 
