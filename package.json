@@ -31,12 +31,12 @@
     },
     "license": "Apache-2.0",
     "appID": "qcoa7sghvg5wbewtaagi2sjh",
-    "serviceID": "rkkyacp5h6oplrnm7zuqai5b",
+    "serviceID": "twf4xivwz2b6s4b33mr3ng6h",
     "main": "application.js",
     "scripts": {
         "test": "grunt unit",
         "debug": "grunt serve",
         "start": "node application.js",
-        "logs": "./bin/fhlogs.sh qcoa7sghvg5wbewtaagi2sjh dev"
+        "logs": "./bin/fhlogs.sh $npm_package_appID dev"
     }
 }
